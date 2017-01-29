@@ -1,0 +1,63 @@
+<div class="row">
+    <div class="col-lg-offset-1 col-lg-10" ng-switch="NoteState">
+          
+        <div class="card note-card" ng-switch-when="Original">
+            <input type="text" class="take-note uno"  ng-click="ShowNote('Alterno')" placeholder="tomar una nota...">
+           <input type="file" id="selectedFile" style="display: none;" />
+           <button onclick="document.getElementById('selectedFile').click();" class="pull-right" style="margin-left:10px;border:0px;background:transparent;">
+                <i class="fa fa-picture-o" aria-hidden="true"></i>
+           </button>
+           <i class="fa fa-list-ul pull-right" aria-hidden="true" ng-click="ShowNote('Lista')"></i>
+        </div>
+        <div class="card note-card"  ng-switch-when="Alterno">
+            <input type="text" class="take-note-title dos" placeholder="Titulo">
+            <i class="fa fa-thumb-tack pull-right" aria-hidden="true"></i>
+            <input type="text" class="take-note tres" placeholder="tomar una nota..."></textarea>
+            <div class="card-note">
+                <i class="fa fa-calendar-check-o" aria-hidden="true" data-toggle="tooltip" title="Añadir recordatorio" data-placement="bottom"></i>
+                <i class="fa fa-user-plus" aria-hidden="true" data-toggle="tooltip" title="Compartir" data-placement="bottom"></i>
+                <i class="fa fa-magic" aria-hidden="true" data-toggle="tooltip" title="Cambiar color" data-placement="bottom"></i>
+                <i class="fa fa-picture-o" aria-hidden="true" data-toggle="tooltip" title="Añadir imagen" data-placement="bottom"></i>
+                <i class="fa fa-archive" aria-hidden="true" data-toggle="tooltip" title="Archivar" data-placement="bottom"></i>
+                <i class="fa fa-th" aria-hidden="true" data-toggle="tooltip" title="Más" data-placement="bottom"></i>
+                <i class="fa fa-check pull-right" aria-hidden="true"> Crear</i>
+            </div>
+        </div>
+        <div class="card note-card" ng-switch-when="Lista">
+            <input type="text" class="take-note-title cinco" placeholder="Titulo">
+            <i class="fa fa-thumb-tack pull-right" aria-hidden="true"></i>
+            <input type="text" class="take-note cuatro" placeholder="+  Elemento de lista"></textarea>
+            <div class="card-note">
+                <i class="fa fa-calendar-check-o" aria-hidden="true" data-toggle="tooltip" title="Añadir recordatorio" data-placement="bottom"></i>
+                <i class="fa fa-user-plus" aria-hidden="true" data-toggle="tooltip" title="Compartir" data-placement="bottom"></i>
+                <i class="fa fa-magic" aria-hidden="true" data-toggle="tooltip" title="Cambiar color" data-placement="bottom"></i>
+                <i class="fa fa-picture-o" aria-hidden="true" data-toggle="tooltip" title="Añadir imagen" data-placement="bottom"></i>
+                <i class="fa fa-archive" aria-hidden="true" data-toggle="tooltip" title="Archivar" data-placement="bottom"></i>
+                <i class="fa fa-th" aria-hidden="true" data-toggle="tooltip" title="Más" data-placement="bottom"></i>
+                <i class="fa fa-check pull-right" aria-hidden="true"> Crear</i>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row grid">
+    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 grid-item" ng-repeat="keep in keeps">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-head" ng-if="keep.nombre != null">
+                    {{keep.nombre}}
+                </div>
+                <div class="card-content">
+                    {{keep.descripcion}}
+                </div>
+                <div class="card-footer">
+                    <i class="fa fa-calendar-check-o" aria-hidden="true" data-toggle="tooltip" title="Añadir recordatorio" data-placement="bottom"></i>
+                    <i class="fa fa-share-alt" aria-hidden="true" data-toggle="tooltip" title="Compartir" data-placement="bottom"></i>
+                    <i class="fa fa-eyedropper" aria-hidden="true" data-toggle="tooltip" title="Cambiar color" data-placement="bottom"></i>
+                    <i class="fa fa-archive" aria-hidden="true" data-toggle="tooltip" title="Archivar" data-placement="bottom"></i>
+                    <i class="fa fa-trash-o" aria-hidden="true" data-toggle="tooltip" title="Eliminar" data-placement="bottom"></i>
+                    <i class="fa fa-heart" aria-hidden="true" data-toggle="tooltip" title="Favorito" data-placement="bottom"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

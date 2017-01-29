@@ -1,0 +1,62 @@
+@import 'https://fonts.googleapis.com/css?family=Lobster';
+
+body{
+    font-family: 'Lobster', cursive;
+    font-size: 13pt;
+    background-image: url("../Imagenes/Fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+.Title{
+color: black;
+font-size: 20pt;
+padding: 1%;
+text-align: center;
+}
+.Conten{
+    margin-top: 6%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 6%;
+}
+@media (max-width: 800px) {
+
+    div#main > div.row{
+        width: 50%;
+    }    
+    body{
+    background-repeat: round;
+}
+}
+@media (min-width: 801px) {
+
+    div#main > div.row{
+        width: 40%;
+    }    
+}
+@media (min-width: 1000px) {
+
+    div#main > div.row{
+        width: 35%;
+    }    
+}
+@media (min-width: 1281px) {
+
+    div#main > div.row{
+        width: 30%;
+    }    
+}
+div#main > div.row{
+    border: 8PX black solid;
+    margin-top: 10%;
+    background-color: grey;
+    opacity: 0.8;
+}
+input{
+    border-radius: 4px;
+    display: block;
+    border: 1px solid #ccc;
+    padding: 2% 4%;
+    width: 100%
+}
